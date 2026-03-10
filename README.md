@@ -81,6 +81,24 @@ Example AI assistant workflow built using Flowise's visual workflow editor.
 
 ---
 
+## Workflow Export
+
+The example agent workflow can be imported directly into Flowise.
+
+File:
+
+```
+demo-ai-agent.json
+```
+
+To import in Flowise:
+
+1. Open Chatflows
+2. Click **Import Chatflow**
+3. Upload the JSON file
+
+---
+
 ## Screenshots
 
 ### Flowise Dashboard
