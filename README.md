@@ -16,6 +16,7 @@ This project provides a simple setup for running Flowise locally using Docker Co
 - Containerized with Docker
 - Easy setup using Docker Compose
 - No cloud dependency
+- Visual AI agent workflow builder
 
 ---
 
@@ -26,12 +27,30 @@ This project provides a simple setup for running Flowise locally using Docker Co
 
 ---
 
+## Architecture
+
+The system runs Flowise inside a Docker container using WSL2 as the Linux environment.
+
+```
+Windows
+   │
+   ├── WSL2
+   │
+   ├── Docker Engine
+   │
+   └── Flowise Container
+         │
+         └── Web UI (http://localhost:3000)
+```
+
+---
+
 ## Setup
 
 Clone the repository
 
 ```bash
-git clone https://github.com/your-username/flowise-local-ai-lab.git
+git clone https://github.com/Jay-7374/flowise-local-ai-lab.git
 ```
 
 Move into the project folder
@@ -51,6 +70,14 @@ Open Flowise in your browser
 ```
 http://localhost:3000
 ```
+
+---
+
+## Demo AI Agent
+
+Example AI assistant workflow built using Flowise's visual workflow editor.
+
+![Demo Agent](screenshots/flowise-demo-agent.png)
 
 ---
 
@@ -78,8 +105,44 @@ http://localhost:3000
 
 ---
 
-## Stop the service
+## Stop the Service
+
+To stop the Flowise container:
 
 ```bash
 docker compose down
 ```
+
+---
+
+## Project Structure
+
+```
+flowise-local-ai-lab
+│
+├── docker-compose.yml
+├── README.md
+├── setup-guide.md
+└── screenshots
+      ├── flowise-dashboard.png
+      ├── flowise-agent-builder.png
+      ├── flowise-container-running.png
+      ├── docker-container-view.png
+      ├── docker-logs.png
+      └── flowise-demo-agent.png
+```
+
+---
+
+## Tech Stack
+
+- Docker
+- Docker Compose
+- Flowise
+- WSL2
+
+---
+
+## License
+
+This project is for learning and experimentation purposes.
